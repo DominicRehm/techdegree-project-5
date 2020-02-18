@@ -1,0 +1,29 @@
+.main-header {
+    @include flexy($disp: flex, $dir: column, $justy: center, $align: center);
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    h1 {
+        text-align: center;
+        font-size: 2.5em;
+        color: $main-blue;
+    }
+}
+
+#search-field {
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 1px solid $main-brown;
+
+    @include brkpoint {
+        width: 500px;
+        height: 45px;
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid $main-blue;
+    }
+}

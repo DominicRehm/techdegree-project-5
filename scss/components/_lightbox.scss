@@ -1,0 +1,30 @@
+.lightbox-container {
+    @include flexy($disp: flex, $dir: column, $justy: center, $align: center);
+    margin: 0 auto;
+
+    @include brkpoint {
+        max-width: $m-width;
+        @include flexy($dir: row, $wrap: wrap);
+    }
+
+    .lightbox-element {
+        margin-bottom: 15px;
+
+        .lightbox-img {
+            padding-bottom: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            transition: transform 0.2s ease-out;
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            @include brkpoint {
+                padding-bottom: 25px;
+            }
+        }
+    }
+}
+
+
+
